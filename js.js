@@ -10,7 +10,10 @@ tabsTitle.forEach(el => el.addEventListener('click', event => {
 
     tabsTitle.forEach(el => el.classList.remove('activ'));
     if (tabsTitleTarget === 'All') {
-        tabsContent.forEach(el => el.classList.remove('hidden'));
+        tabsContent.forEach(el => { el.classList.remove('hidden') });
+
+
+
     } else { tabsContent.forEach(el => el.classList.add('hidden')); }
 
 

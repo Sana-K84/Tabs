@@ -18,24 +18,89 @@ ul li {
 .tab_title {}
 
 .tabs_wrapper {
-    width: 535px;
+    width: 560px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center
 }
 
 .content {
+    width: 0;
+    height: 0;
+    border: 0;
+    border-radius: 0;
+    opacity: 0;
+    animation-duration: 2s;
+    /* animation-delay: 2s; */
+    /* animation-iteration-count: 0; */
+    animation-name: a1;
+    animation-fill-mode: forwards;
+    position: relative;
+    top: 20vh;
+    z-index: 0;
+}
+
+@keyframes a1 {
+    to {
+        opacity: 1;
+        width: 130px;
+        height: 140px;
+        border: 2px solid black;
+        border-radius: 10px;
+        margin: 20px;
+        z-index: 10;
+        top: 0;
+    }
+
+}
+
+.hidden {
+    opacity: 1;
     width: 130px;
     height: 140px;
     border: 2px solid black;
     border-radius: 10px;
     margin: 20px;
+    opacity: 1;
+    animation-duration: 2s;
+
+    animation-name: hide;
+    animation-fill-mode: forwards;
+    position: relative;
+    z-index: 10;
 }
 
-.hidden {
-    display: none;
+@keyframes hide {
+    10% {
+        top: 1vh;
+    }
+
+
+
+
+    100% {
+        top: 20vh;
+    }
+
+    to {
+
+        opacity: 0;
+        height: 0;
+        width: 0;
+        padding: 0;
+        margin: 0;
+        z-index: 1;
+    }
+
+
+
 }
+
+/* .hidden {
+    display: none;
+} */
 
 .activ {
     background: gold;
